@@ -1,4 +1,0 @@
-A. Käyttöliittymä
-B. CSS-tyylit
-C. JavaScript-koodaus
-D. Testaaminen
