@@ -3,7 +3,7 @@ let lista = document.getElementById("nimiLista");
 
 lomake.addEventListener("submit", uusiKaveri);
 
-const kaverit = []
+const kaverit = [];
 
 function uusiKaveri(event){
     event.preventDefault()
@@ -14,10 +14,14 @@ function uusiKaveri(event){
     }
     kaverit.push(nimi);
     document.querySelector('input[type="text"]').value = "";
-
-    let uusiElementti = document.createElement("li");
-    let uusiElementtiNimi = document.createTextNode(nimi);
-    uusiElementti.appendChild(uusiElementtiNimi);
-    document.querySelector("#nimiLista").appendChild(uusiElementti);
+    console.log(`kaveri nro ${kaverit.length} lisätty, nimi: ${nimi}`)
 }
 
+//if(kaverit.length = 10){
+//    for(let indeksi=0; indeksi<kaverit.length; indeksi++){
+//        let uusiElementti = document.createElement("li");
+//        let uusiElementtiNimi = document.createTextNode(kaverit[indeksi]);
+//        uusiElementti.appendChild(uusiElementtiNimi);
+//        document.querySelector("#nimiLista").appendChild(uusiElementti);
+//    }
+//}
