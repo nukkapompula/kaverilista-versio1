@@ -4,6 +4,7 @@ let lista = document.getElementById("nimiLista");
 lomake.addEventListener("submit", uusiKaveri);
 
 const kaverit = [];
+let indeksi = 0;
 
 function uusiKaveri(event){
     event.preventDefault()
@@ -14,7 +15,13 @@ function uusiKaveri(event){
     }
     kaverit.push(nimi);
     document.querySelector('input[type="text"]').value = "";
+    indeksi += 1;
     console.log(`kaveri nro ${kaverit.length} lisätty, nimi: ${nimi}`)
+    if (indeksi > 9) {
+        console.log("NYT ON 10 TÄYNNÄ!!");
+    } else {
+        console.log("puuttuu jäseniä");
+    }
 }
 
 //if(kaverit.length = 10){
