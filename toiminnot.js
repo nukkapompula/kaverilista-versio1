@@ -17,18 +17,17 @@ function uusiKaveri(event){
     document.querySelector('input[type="text"]').value = "";
     indeksi += 1;
     console.log(`kaveri nro ${kaverit.length} lisätty, nimi: ${nimi}`)
-    if (indeksi > 9) {
+    if (indeksi > 2) {
         console.log("NYT ON 10 TÄYNNÄ!!");
+        for(let valitsin=0; valitsin<kaverit.length; valitsin++){
+            let uusiElementti = document.createElement("li");
+            let uusiElementtiNimi = document.createTextNode(kaverit[valitsin]);
+            uusiElementti.appendChild(uusiElementtiNimi);
+            document.querySelector("#nimiLista").appendChild(uusiElementti);
+        }
+        indeksi = 0;
+        kaverit.length = 0;
     } else {
         console.log("puuttuu jäseniä");
     }
 }
-
-//if(kaverit.length = 10){
-//    for(let indeksi=0; indeksi<kaverit.length; indeksi++){
-//        let uusiElementti = document.createElement("li");
-//        let uusiElementtiNimi = document.createTextNode(kaverit[indeksi]);
-//        uusiElementti.appendChild(uusiElementtiNimi);
-//        document.querySelector("#nimiLista").appendChild(uusiElementti);
-//    }
-//}
