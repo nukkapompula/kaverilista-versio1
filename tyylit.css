@@ -18,3 +18,11 @@ li {
     text-align: left;
     margin-left: 45%;
 }
+
+form input {
+    border: none;
+    background-color: white;
+    color: black;
+    font-family: 'Ink Free', Arial;
+    font-size: 111%;
+}

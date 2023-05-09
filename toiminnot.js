@@ -27,7 +27,8 @@ function uusiKaveri(event){
         }
         indeksi = 0;
         kaverit.length = 0;
+        lista.removeChild()
     } else {
-        console.log("puuttuu jäseniä");
+        console.log("puuttuu immeisiä");
     }
 }
