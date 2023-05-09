@@ -13,11 +13,22 @@ function uusiKaveri(event){
         window.alert("Täytä tekstikenttä kaverisi nimellä.");
         return;
     }
+
+    if (indeksi > 9) {
+        for(let apuri=0; apuri<10; apuri++){
+            let poistettava = document.getElementById("listaEsine");
+            lista.removeChild(poistettava);
+        }
+        indeksi = 0;
+        kaverit.length = 0;
+    }
+
     kaverit.push(nimi);
     document.querySelector('input[type="text"]').value = "";
     indeksi += 1;
     console.log(`kaveri nro ${kaverit.length} lisätty, nimi: ${nimi}`)
-    if (indeksi > 2) {
+
+    if (indeksi > 9) {
         console.log("NYT ON 10 TÄYNNÄ!!");
         for(let valitsin=0; valitsin<kaverit.length; valitsin++){
             let uusiElementti = document.createElement("li");
@@ -26,14 +37,6 @@ function uusiKaveri(event){
             uusiElementti.appendChild(uusiElementtiNimi);
             document.querySelector("#nimiLista").appendChild(uusiElementti);
         }
-        indeksi = 0;
-        kaverit.length = 0;
-
-        for(let apuri=0; apuri<3; apuri++){
-            let poistettava = document.getElementById("listaEsine");
-            lista.removeChild(poistettava);
-        }
-
     } else {
         console.log("puuttuu immeisiä");
     }
