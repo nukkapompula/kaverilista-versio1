@@ -22,12 +22,18 @@ function uusiKaveri(event){
         for(let valitsin=0; valitsin<kaverit.length; valitsin++){
             let uusiElementti = document.createElement("li");
             let uusiElementtiNimi = document.createTextNode(kaverit[valitsin]);
+            uusiElementti.id = "listaEsine";
             uusiElementti.appendChild(uusiElementtiNimi);
             document.querySelector("#nimiLista").appendChild(uusiElementti);
         }
         indeksi = 0;
         kaverit.length = 0;
-        lista.removeChild()
+
+        for(let apuri=0; apuri<3; apuri++){
+            let poistettava = document.getElementById("listaEsine");
+            lista.removeChild(poistettava);
+        }
+
     } else {
         console.log("puuttuu immeisiä");
     }
