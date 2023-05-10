@@ -33,7 +33,7 @@ function uusiKaveri(event){
         for(let valitsin=0; valitsin<kaverit.length; valitsin++){
             let uusiElementti = document.createElement("li");
             let uusiElementtiNimi = document.createTextNode(kaverit[valitsin]);
-            uusiElementti.id = "listaEsine";
+            uusiElementti.className = "listaEsine";
             uusiElementti.appendChild(uusiElementtiNimi);
             document.querySelector("#nimiLista").appendChild(uusiElementti);
         }
